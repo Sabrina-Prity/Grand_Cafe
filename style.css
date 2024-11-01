@@ -1,0 +1,718 @@
+body {
+    max-width: 1425px;
+    margin: auto;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgb(75, 70, 70);
+    padding: 10px;
+}
+
+.logo {
+    width: 220px;
+}
+
+.banner_container {
+    position: relative;
+    /* Ensures the overlay positions correctly */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
+.banner_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Controls dimming */
+    z-index: 1;
+}
+
+.intro {
+    position: relative;
+    z-index: 2;
+    /* Ensures content is above the overlay */
+    padding: 40px;
+}
+
+.search-bar {
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: -10px;
+    font-size: 20px;
+}
+
+.fa-solid {
+    margin-left: 10px;
+}
+
+.menu_container {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    gap: 50px;
+    font-size: 20px;
+    color: white;
+    margin-top: 40px;
+}
+
+li:hover {
+    color: rgb(217, 123, 60);
+    cursor: pointer;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.banner_paragraph {
+    text-wrap: wrap;
+    width: 50%;
+    margin-top: -30px;
+    color: white;
+    font-size: 20px;
+    padding-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.banner_button {
+    padding: 10px;
+    font-weight: bold;
+    background-color: rgb(43, 41, 41);
+    color: white;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    margin-top: -20px;
+}
+
+.banner_button:hover {
+    background-color: #d97b3c;
+    cursor: pointer;
+}
+
+.about-us {
+    display: flex;
+    flex-wrap: wrap;
+    /* Helps with responsiveness */
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    gap: 70px;
+    margin-top: 50px;
+}
+
+.about-title {
+    color: rgb(231, 90, 19);
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.description {
+    margin-top: -80px;
+    max-width: 600px;
+    max-height: 500px;
+    text-align: left;
+}
+
+.about-para {
+    text-wrap: wrap;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -10px;
+    margin-bottom: 40px;
+}
+
+.about_image {
+    max-width: 500px;
+}
+
+.about_image img {
+    width: 100%;
+    /* Ensures the image scales with container */
+    border-radius: 10px;
+    /* Adds a nice rounded effect */
+}
+
+.gallery-head {
+    font-size: 40px;
+    color: rgb(231, 90, 19);
+    text-align: center;
+}
+
+.gallery-para {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -10px;
+    margin-bottom: 40px;
+    padding: 0 50px;
+    /* Adjusted for responsiveness */
+    text-align: center;
+}
+
+.gallery-pic {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.item {
+    width: 350px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    /* Adds slight rounding for a clean look */
+    transition: transform 0.3s ease;
+    /* Smooth hover effect */
+}
+
+.item:hover img {
+    transform: scale(1.05);
+    /* Subtle zoom effect on hover */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.gallery_button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(43, 41, 41);
+    color: white;
+    border-radius: 10px;
+    width: 200px;
+    height: 60px;
+    margin-top: 30px;
+}
+
+.gallery_button:hover {
+    background-color: #d97b3c;
+    cursor: pointer;
+}
+.services {
+    background-image: url(images/services-bg.png);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 750px;
+}
+
+.services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.service-title {
+    padding-top: 50px;
+    margin-top: 150px;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    z-index: 2; /* Ensure title is above overlay */
+    position: relative; /* Adjust positioning */
+}
+
+.service-para {
+    color: white;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -10px;
+    /* margin-bottom: 40px; */
+    padding: 0 50px;
+    text-align: center;
+    z-index: 2; /* Ensure paragraph is above overlay */
+    position: relative; /* Adjust positioning */
+}
+
+.service-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 50px 0;
+    z-index: 2; /* Ensure items are above overlay */
+    position: relative; /* Adjust positioning */
+}
+
+.items {
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+    text-align: center;
+    margin-bottom: 50px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background-color: white;
+    position: relative; /* Ensure positioning for the button */
+}
+
+.icon1 {
+    margin-top: 40px;
+}
+
+.items:hover {
+    transform: scale(1.05);
+}
+
+.icon_container {
+    margin-bottom: 15px;
+}
+
+.icons {
+    width: 80px;
+    height: auto;
+}
+
+.see-more {
+    display: none; /* Hide by default */
+    padding: 10px 20px;
+    background-color: rgb(43, 41, 41);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    position: absolute; /* Position the button */
+    bottom: 40px; /* Increased gap from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center the button */
+    transition: background-color 0.2s;
+    font-size: 16px; /* Adjust font size for readability */
+    z-index: 2; /* Ensure button is above overlay */
+}
+
+.items:hover .see-more {
+    display: block; /* Show on hover */
+}
+
+.see-more:hover {
+    background-color: #d97b3c; /* Change color on hover */
+}
+
+.reviews{
+    background-image: url(images/client-bg.png);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    margin-bottom: 100px;
+}
+.review-heading{
+    margin-top: 100px;
+    font-size: 30px;
+    color: rgb(231, 90, 19);
+    text-align: center; 
+}
+.r1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.review-pic{
+    margin-left: -300px;
+    padding: 20px;
+}
+.review-para{
+    width: 500px;
+    text-wrap: wrap;
+    font-size: 15px;
+}
+.blog-title{
+    text-align: center;
+    margin-top: 100px;
+    font-size: 30px;
+    color: rgb(231, 90, 19);
+}
+
+.our-blog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+
+.blog {
+    max-width: 500px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.blog:hover {
+    transform: scale(1.02);
+}
+
+.blog-img img {
+    width: 100%;
+    height: 350px;
+    display: block;
+}
+
+
+.blog-msg {
+    padding: 20px;
+}
+
+.blog-msg h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blog-msg p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.read-more-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(43, 41, 41);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.read-more-button:hover {
+    background-color: #d97b3c;
+    cursor: pointer;
+}
+
+
+.contact-form {
+    max-width: 500px;
+    margin: 100px auto; /* 100px margin on top and bottom, auto centers horizontally */
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-heading {
+    text-align: center;
+    font-size: 35px;
+    color: rgb(231, 90, 19);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(43, 41, 41);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #d97b3c;
+}
+
+.footer {
+    margin-top: 100px;
+    width: 100%;
+    max-height: 500px;
+    background-color: #333;
+    color: #fff;
+    padding: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.footer-section {
+    max-width: 300px;
+    text-align: center;
+}
+
+.footer-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: rgb(231, 90, 19);
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: rgb(231, 90, 19);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #555;
+    margin-top: 20px;
+    color: #ccc;
+}
+
+.contact {
+    background: none;
+}
+
+/* Add responsive breakpoints for smaller screens */
+@media (max-width: 768px) {
+    /* Center the nav menu and logo */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+        padding-top: 30px;
+    }
+
+    .menu_container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        margin-left: -30px;
+    }
+
+    /* Make images and items in gallery and services responsive */
+    .gallery-pic, .service-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item, .items {
+        max-width: 90%;
+    }
+
+    /* Adjust banner text and button for smaller screens */
+    .banner_container {
+        height: auto; /* Adjust to content height */
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .banner_paragraph {
+        margin-top: 20px;
+        margin-left: 30px;
+        width: 80%;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .banner_button {
+        width: 120px;
+        height: 40px;
+        font-size: 10px;
+        margin-left: 90px;
+        align-items: center;
+    }
+
+    /* Adjust "About Us" section */
+    .about-us {
+        padding: 50px 10px;
+        gap: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .about-para{
+        width: 350px;
+        font-size: 18px;
+    }
+    
+    .services{
+        margin-bottom: 1050px;
+    }
+
+    .reviews {
+        padding: 50px 0; /* Add padding to prevent elements from sticking to the edges */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .review-heading {
+        font-size: 25px;
+        color: rgb(231, 90, 19);
+        text-align: center;
+        margin-bottom: 30px; /* Space between heading and reviews */
+    }
+    .reviewer-name{
+        margin-top: -40PX;
+        text-align: center;
+    }
+    
+    .r1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-end; /* Aligns items at the bottom */
+        gap: 40px; /* Adds space between review items */
+        max-width: 1000px; /* Limit width for better layout control */
+        padding-bottom: 50px;
+    }
+    
+    .review-pic, .review-para {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Ensures content is at the bottom */
+        max-width: 300px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8); /* Slight background for readability */
+        border-radius: 10px;
+        text-align: center;
+    }
+  
+    .review-para {
+        font-size: 15px;
+        color: #333;
+    }
+    
+    .footer{
+        width: 100%;
+        height: 100%;
+        background-color: #333;
+        color: #fff;
+        padding: 50px;
+        padding-bottom: 200px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .right{
+        margin-left: -100px;
+    }
+    /* Center form elements and contact section */
+    .contact-form {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .form-heading {
+        font-size: 25px;
+    }
+}
+
+/* Additional adjustments for ultra-small screens (425px and under) */
+@media (max-width: 425px) {
+    /* Reduce padding and font sizes for ultra-small screens */
+    .banner_container {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .banner_paragraph {
+        font-size: 14px;
+    }
+
+    .gallery-para, .service-para, .blog-msg p {
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .footer-section h2 {
+        font-size: 18px;
+    }
+}
