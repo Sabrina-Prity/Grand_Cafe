@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/Sabrina-Prity/Grand_Cafe/blob/main/images/cover-image.png" />
+  <img src="https://github.com/Sabrina-Prity/Grand_Cafe/blob/main/images/Cover-3.png" />
 </div>
 
 # ☕ Grand Cafe - Coffee Shop Website
